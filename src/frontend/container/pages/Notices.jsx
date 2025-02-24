@@ -15,7 +15,7 @@ function Notices() {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.data);
+        // console.log(data.data);
         setData(data.data);
         setError(false);
         setLoading(false);
@@ -50,7 +50,7 @@ function Notices() {
                 </h3>
               </div>
             ) : (
-              !loading && <PaginatedItems itemsPerPage={4} items={data} />
+              !loading && <PaginatedItems itemsPerPage={5} items={data} />
             )}
           </div>
         </div>

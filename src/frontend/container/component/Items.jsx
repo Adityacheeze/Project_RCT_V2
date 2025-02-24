@@ -1,40 +1,36 @@
-import { useEffect, useState } from "react";
-
-function Items({ currentItems , offset }) {
-  // const [data, setData] = useState([]);
- 
+function Items({ currentItems, offset }) {
   return (
     <>
-      <div className="container">
-        <div className="row border fw-bold text-center">
-          <div className="col-1 border">S No.</div>
-          <div className="col-5 border">Title</div>
-          <div className="col-2 border">Start Date</div>
-          <div className="col-2 border">End Date</div>
-          <div className="col-2 border">Documents</div>
-        </div>
-        {currentItems && currentItems.map((item, index) => {
-          // console.log(index);
-          return (
-            <div className="row">
-              <div className="col-1 border d-flex justify-content-center align-items-center">
-                {index + offset + 1}
-              </div>
-              <div className="col-5 border">{item.title}</div>
-              <div className="col-2 border d-flex justify-content-center align-items-center">
-                {item.tender_date}
-              </div>
-              <div className="col-2 border d-flex justify-content-center align-items-center">
-                {item.end_date}
-              </div>
-              <div className="col-2 border d-flex justify-content-center align-items-center">
-                <a href={item.logo_hidden_images} target="_blank">
-                  <i className="fa-solid fa-file-pdf"></i>
-                </a>
-              </div>
-            </div>
-          );
-        })}
+      <div className="table-responsive border modal-table-custom">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr className="border-top">
+              <th scope="col">S No.</th>
+              <th scope="col">Title</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+              <th scope="col">Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+          {currentItems &&
+          currentItems.map((item, index) => {
+              return (
+                <tr>
+                  <td>{index + offset + 1}</td>
+                  <td>{item.title}</td>
+                  <td>{item.tender_date}</td>
+                  <td>{item.end_date}</td>
+                  <td>
+                    <a href={item.logo_hidden_images} target="_blank">
+                      <i className="fa-solid fa-file-pdf"></i>
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </>
   );
