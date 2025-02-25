@@ -7,18 +7,20 @@ import Notices from "./container/pages/Notices";
 import PageNotFound from "./container/pages/PageNotFound";
 import Home from "./container/pages/Home";
 import CauseList from "./container/pages/CauseList";
+import Gallery from "./container/pages/Gallery";
 
 function AppRouting() {
   return (
     <>
-      <Routes>  
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="home" element={<Home></Home>}></Route>
-        <Route path="about" element={<AboutUs ></AboutUs>}></Route>
-        <Route path="causelist" element={<CauseList ></CauseList>}></Route>
-        <Route path="notices" element={<Notices></Notices>}></Route>
-        <Route path="contact" element={<ContactUs></ContactUs>}></Route>
-        <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="home" element={<Home />}></Route>
+        <Route path="about" element={<AboutUs />}></Route>
+        <Route path="causelist" element={<CauseList />}></Route>
+        <Route path="notices" element={<Notices />}></Route>
+        <Route path="contact" element={<ContactUs />}></Route>
+        <Route path="gallery" element={<Gallery />}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </>
   );

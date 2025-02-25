@@ -250,7 +250,7 @@ li {
   font-weight: 700;
   color: white;
   padding: 30px 43px;
-  background: url("./public/assets/heading-bg.jpg");
+  background: url("/assets/heading-bg.jpg");
 }
 .nav-text-content {
   margin: 12px 30px;
