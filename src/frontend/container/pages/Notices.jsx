@@ -1,32 +1,12 @@
-import React, { useEffect, useState } from "react";
 import Breadcrumbs from "../component/Breadcrumbs";
-import NavItemContent from "../component/NavItemContent";
 import LoadingSpinner from "../component/LoadingSpinner";
 import PaginatedItems from "../component/PaginatedItems";
 import Sidebar from "../component/Sidebar.jsx";
 import { dataLeft } from "../component/sidebar.js";
+import { useGetAllTendersQuery } from "../../../redux/slice/apiSlice.js";
 function Notices() {
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch(
-      "http://164.52.201.69/rct_application/public/api/v1/getAllTenders/7/1"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        // console.log(data.data);
-        setData(data.data);
-        setError(false);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error(error);
-        setError(true);
-        setLoading(false);
-      });
-  }, []);
 
+  const {data, error, isLoading} = useGetAllTendersQuery()
   return (
     <div className="nav-item-content">
       <h2>Notices</h2>
@@ -36,8 +16,8 @@ function Notices() {
           <div class="col-12 col-sm-12 col-md-12 col-lg-3">
             <Sidebar flag={true} data={dataLeft} />
           </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-9 media-middle">
-            {loading && (
+          <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+            {isLoading && (
               <div className="d-flex justify-content-center m-5">
                 <LoadingSpinner />
               </div>
@@ -50,7 +30,7 @@ function Notices() {
                 </h3>
               </div>
             ) : (
-              !loading && <PaginatedItems itemsPerPage={5} items={data} />
+              !isLoading && <PaginatedItems itemsPerPage={5} items={data?.data} />
             )}
           </div>
         </div>

@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useGetBenchLocationsMutation } from "../../../redux/slice/postApiSlice";
 
 function HeaderTop() {
+  const [getBenchLocations, { data, error, isLoading }] =
+    useGetBenchLocationsMutation();
+
+  useEffect(() => {
+    getBenchLocations();
+  }, [getBenchLocations]);
+
   return (
     <>
       <div class="top-area">
@@ -29,10 +37,16 @@ function HeaderTop() {
                     class="form-select search_header text-light"
                     aria-label="Default select example"
                   >
-                    <option defaultValue={"Search Branch"}>Search Branch</option>
-                    <option value="1">DELHI</option>
-                    <option value="2">BANGLORE</option>
-                    <option value="3">PUNE</option>
+                    <option defaultValue={"Search Branch"}>
+                      Search Branch
+                    </option>
+                    {data?.data.map((bench) => {
+                      return (
+                        <option value={bench.id}>
+                          {bench.railway_bench_name}
+                        </option>
+                      );
+                    })}
                   </select>
                 </div>
               </div>
@@ -41,7 +55,7 @@ function HeaderTop() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default HeaderTop
+export default HeaderTop;

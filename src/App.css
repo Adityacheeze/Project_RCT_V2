@@ -14,6 +14,7 @@ a {
 
 ul,
 h2,
+h6,
 li {
   list-style: none;
   margin: 0;
@@ -619,6 +620,7 @@ li {
   border-radius: 4px;
 }
 
+/* MODAL START */
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 80vw;
@@ -652,3 +654,51 @@ h6 {
   margin-bottom: 16px;
   width: 100%;
 }
+/* MODAL END */
+
+/* GALLERY START */
+.gallery-sec{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-sec a{
+  width: 30%;
+  display: inline-block;
+  margin: 0px 15px 30px  15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-sec img{
+  width: 100%;
+  height: 250px;
+}
+.spinner-gallery{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+.img-details{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #00000098;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-details h5{
+  padding: 4px;
+}
+
+.viewer-custom > .react-viewer-mask{
+  background: rgba(55, 55, 55, 0.6);
+}
+
+/* GALLERY END */
