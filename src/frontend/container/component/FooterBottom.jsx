@@ -11,10 +11,10 @@ function FooterBottom() {
   const { data: footersData, error: footersError } = useGetFootersQuery();
   return (
     <>
-      <div class="footer">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="container_footer">
+      <div className="footer">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="container_footer">
               <div className="footer-details">
                 {footersError ? (
                   <div>

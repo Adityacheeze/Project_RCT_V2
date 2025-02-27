@@ -6,15 +6,15 @@ function Breadcrumbs({title}) {
     <>
       <div>
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb p-3 bg-body-secondary">
-            <li class="breadcrumb-item">
-              <Link class="link-body-emphasis fw-semibold" to="/home">
+          <ol className="breadcrumb p-3 bg-body-secondary">
+            <li className="breadcrumb-item">
+              <Link className="link-body-emphasis fw-semibold" to="/home">
                 Home
               </Link>
             </li>
-            <li class="breadcrumb-item">
+            <li className="breadcrumb-item">
               <Link
-                class="link-body-emphasis fw-semibold text-decoration-none"
+                className="link-body-emphasis fw-semibold text-decoration-none"
                 href="/about-us"
               >
                 {title}

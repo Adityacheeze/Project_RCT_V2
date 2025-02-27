@@ -11,12 +11,12 @@ function Notices() {
     <div className="nav-item-content">
       <h2>Notices</h2>
       <Breadcrumbs title={"Notices"}></Breadcrumbs>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-3">
             <Sidebar flag={true} data={dataLeft} />
           </div>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-9">
             {isLoading && (
               <div className="d-flex justify-content-center m-5">
                 <LoadingSpinner />

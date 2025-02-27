@@ -11,30 +11,30 @@ function HeaderTop() {
 
   return (
     <>
-      <div class="top-area">
-        <div class="container-fluid">
-          <div class="row">
-            <header class="top-area-contents">
-              <div class="col col-lg-4 top-left-details">
+      <div className="top-area">
+        <div className="container-fluid">
+          <div className="row">
+            <header className="top-area-contents">
+              <div className="col col-lg-4 top-left-details">
                 <img src="./assets/Group 4085@2x.png" alt="Image_1" />
-                <a href="#" class="mb-lg-0 me-lg-auto link-body-emphasis">
-                  <h4 class="fw-bold">RAILWAY CLAIM TRIBUNAL</h4>
+                <a href="#" className="mb-lg-0 me-lg-auto link-body-emphasis">
+                  <h4 className="fw-bold">RAILWAY CLAIM TRIBUNAL</h4>
                   <h6>Online Court Services of RCT</h6>
                 </a>
               </div>
-              <div class="col col-lg-4 top-right-details">
-                <div class="right-badge">
-                  <span class="badge">
+              <div className="col col-lg-4 top-right-details">
+                <div className="right-badge">
+                  <span className="badge">
                     Skip to Main Content | Screen Reader Access | A- A A+
                     English
                   </span>
                 </div>
 
-                <div class="right-btns">
+                <div className="right-btns">
                   <a href="#">E-Filling</a>
                   <a href="#">Advocate Diary</a>
                   <select
-                    class="form-select search_header text-light"
+                    className="form-select search_header text-light"
                     aria-label="Default select example"
                   >
                     <option defaultValue={"Search Branch"}>
@@ -42,7 +42,7 @@ function HeaderTop() {
                     </option>
                     {data?.data.map((bench) => {
                       return (
-                        <option value={bench.id}>
+                        <option key={bench.id} value={bench.id}>
                           {bench.railway_bench_name}
                         </option>
                       );

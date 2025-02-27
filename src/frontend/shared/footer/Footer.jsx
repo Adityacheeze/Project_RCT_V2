@@ -30,8 +30,8 @@ function Footer() {
   return (
     <>
       <FooterSlider />
-      <div id="scroll-to-top" class="back-to-top">
-        <i class="fa-solid fa-arrow-up"></i>
+      <div id="scroll-to-top" className="back-to-top">
+        <i className="fa-solid fa-arrow-up"></i>
       </div>
       <FooterBottom />
     </>

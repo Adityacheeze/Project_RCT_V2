@@ -6,9 +6,9 @@ function WhatsNew() {
   
   return (
     <>
-      <div class="mid-section">
-        <div class="whats-new-title">
-          <h4 class="blinking-text">What's New</h4>
+      <div className="mid-section">
+        <div className="whats-new-title">
+          <h4 className="blinking-text">What's New</h4>
           <span>
             <i
               id="marquee_btn"

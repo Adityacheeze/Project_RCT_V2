@@ -1,47 +1,48 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Cards() {
   return (
     <>
-      <div class="cards">
-          <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="card_sidebar">
+      <div className="cards">
+          <div className="row">
+            <div className="col-sm-12 col-md-4 col-lg-4">
+              <Link to={"/causelist"} className="card_sidebar">
                 <img src="./assets/001-clipboard.png" alt="" />
                 <span>Cause List</span>
-              </div>
+              </Link>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="card_sidebar">
+            <div className="col-sm-12 col-md-4 col-lg-4">
+              <Link to={"/*"} className="card_sidebar">
                 <img src="./assets/002-law.png" alt="" />
                 <span>Case Search</span>
-              </div>
+              </Link>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="card_sidebar">
+            <div className="col-sm-12 col-md-4 col-lg-4">
+              <Link to={"/*"} className="card_sidebar">
                 <img src="./assets/003-stamp.png" alt="" />
                 <span>Case Status</span>
-              </div>
+              </Link>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="card_sidebar">
+          <div className="row">
+            <div className="col-sm-12 col-md-4 col-lg-4">
+              <Link to={"/*"} className="card_sidebar">
                 <img src="./assets/004-auction.png" alt="" />
                 <span>Daily Orders</span>
-              </div>
+              </Link>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="card_sidebar">
+            <div className="col-sm-12 col-md-4 col-lg-4">
+              <Link to={"/*"} className="card_sidebar">
                 <img src="./assets/005-right-to-objection.png" alt="" />
                 <span>Case Under Objection</span>
-              </div>
+              </Link>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-              <div class="card_sidebar">
+            <div className="col-sm-12 col-md-4 col-lg-4">
+              <Link to={"/*"} className="card_sidebar">
                 <img src="./assets/006-regulation.png" alt="" />
                 <span>Final Orders / Judgements</span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

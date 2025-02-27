@@ -19,7 +19,21 @@ export const postApiSlice = createApi({
       query: (benchID) => ({
         url: "getCourtNos",
         method: "POST",
-        body: benchID,
+        body: { bench_location: benchID },
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }),
+    }),
+    submitFormData: builder.mutation({
+      query: (formData) => ({
+        url: "public_causelist",
+        method: "POST",
+        body: {
+          bench_id: formData.RCTbenchID,
+          court_no: formData.courtNum,
+          listing_date: formData.date,
+        },
         headers: {
           "Content-Type": "application/json",
         },
@@ -28,6 +42,10 @@ export const postApiSlice = createApi({
   }),
 });
 
-export const { useGetBenchLocationsMutation, useGetCourtNosMutation } = postApiSlice;
+export const {
+  useGetBenchLocationsMutation,
+  useGetCourtNosMutation,
+  useSubmitFormDataMutation,
+} = postApiSlice;
 
 export default postApiSlice;

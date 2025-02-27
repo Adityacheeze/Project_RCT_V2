@@ -3,7 +3,7 @@ import React from "react";
 function CauseListItems({ items }) {
   return (
     <div className="table-responsive border modal-table-custom">
-      <table class="table table-striped">
+      <table className="table table-striped">
         <thead>
           <tr className="border-top">
             <th scope="col">Sr. No.</th>
@@ -19,7 +19,7 @@ function CauseListItems({ items }) {
         <tbody>
           {items.map((item, index) => {
             return (
-              <tr>
+              <tr key={index + 1}>
                 <td>{index + 1}</td>
                 <td>{item.case_title}</td>
                 <td>{item.case_no}</td>

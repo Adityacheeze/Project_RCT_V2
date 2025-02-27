@@ -15,10 +15,10 @@ function AppRouting() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="home" element={<Home />}></Route>
-        <Route path="about" element={<AboutUs />}></Route>
+        <Route path="about-us" element={<AboutUs />}></Route>
         <Route path="causelist" element={<CauseList />}></Route>
         <Route path="notices" element={<Notices />}></Route>
-        <Route path="contact" element={<ContactUs />}></Route>
+        <Route path="contact-us" element={<ContactUs />}></Route>
         <Route path="gallery" element={<Gallery />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>

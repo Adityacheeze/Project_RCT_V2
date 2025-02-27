@@ -60,8 +60,8 @@ function AboutUs() {
         Reset
       </button>
       <div>
-        {nums.map((num) => {
-          return <div>{num}</div>;
+        {nums.map((num, index) => {
+          return <div key={index}>{num}</div>;
         })}
       </div>
       <hr />

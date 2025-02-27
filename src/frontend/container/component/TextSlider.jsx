@@ -12,8 +12,8 @@ function TextSlider({ flag }) {
         </Marquee>
       ) : (
         <Marquee pauseOnHover={true} play={flag}>
-          {data?.data.map((whats_new) => {
-            return <h5>{whats_new.title}</h5>;
+          {data?.data.map((whats_new, index) => {
+            return <h5 key={index}>{whats_new.title}</h5>;
           })}
         </Marquee>
       )}
