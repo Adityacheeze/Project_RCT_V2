@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Search from "./Search";
 
 function Nav() {
   const [flag, setFlag] = useState(false);
-
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       <nav className="nav-area">
@@ -14,62 +15,70 @@ function Nav() {
               <div className="nav nav-contents">
                 <ul className="nav">
                   <li className="nav-item">
-                    <Link to={"/"} className="nav-link">
+                    <NavLink to={"/"} className="nav-link">
                       <i className="home fs-3 fa-solid fa-house"></i>
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link to={"/about-us"} className="nav-link">
+                    <NavLink to={"/about-us"} className="nav-link">
                       About Us
-                    </Link>
+                    </NavLink>
                   </li>
                   <div className="dropdown nav-item">
-                    <Link className="nav-link dropdown-link arrow-down">Services</Link>
+                    <Link className="nav-link dropdown-link arrow-down">
+                      Services
+                    </Link>
                     <i className="fa-solid fa-caret-down"></i>
                     <ul className="dropdown-menu custom-dropdown">
                       <li>
-                        <Link className="dropdown-item">Service 1</Link>
+                        <NavLink to={"/causelist"} className="dropdown-item">
+                          Cause List
+                        </NavLink>
                       </li>
                       <li>
-                        <Link className="dropdown-item">Service 2</Link>
+                        <NavLink to={"/*"} className="dropdown-item">
+                          Case Status
+                        </NavLink>
                       </li>
                       <li>
-                        <Link className="dropdown-item">Service 3</Link>
+                        <NavLink to={"/*"} className="dropdown-item">
+                          Judgement
+                        </NavLink>
                       </li>
                     </ul>
                   </div>
                   <li className="nav-item">
-                    <Link to={"/causelist"} className="nav-link">
+                    <NavLink to={"/causelist"} className="nav-link">
                       Causelist
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link to={"/uploads"} className="nav-link">
+                    <NavLink to={"/uploads"} className="nav-link">
                       Uploads
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link to={"/notices"} className="nav-link">
+                    <NavLink to={"/notices"} className="nav-link">
                       Notices
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link to={"/multimedia"} className="nav-link">
+                    <NavLink to={"/multimedia"} className="nav-link">
                       Multimedia
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link to={"/gallery"} className="nav-link">
+                    <NavLink to={"/gallery"} className="nav-link">
                       Gallery
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link to={"/contact-us"} className="nav-link">
+                    <NavLink to={"/contact-us"} className="nav-link">
                       Contact Us
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
-                <Search flag={flag} setFlag={setFlag}/>
+                <Search flag={flag} setFlag={setFlag} />
               </div>
             </div>
           </div>

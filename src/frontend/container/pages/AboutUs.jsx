@@ -26,14 +26,20 @@ function AboutUs() {
   if (vistorsError || lastUpdateError)
     return <p>Error: {vistorsError?.error || lastUpdateError?.error}</p>;
   const content = [
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quo magni atque aspernatur nemo porro asperiores tempore officiis odit, aperiam dolores necessitatibus perferendis dignissimos animi, molestiae omnis debitis! Corporis amet veritatis rem magnam sint tempora in ducimus id totam veniam! Ducimus mollitia tempora dignissimos perspiciatis! Ex sapiente quibusdam perferendis eveniet earum atque, aspernatur repudiandae quisquam numquam sint tenetur dolore iure recusandae deleniti facilis quasi explicabo sunt. Maiores repellat nisi, saepe praesentium ipsam adipisci. Molestias ullam culpa velit, a ea minus adipisci exercitationem necessitatibus animi, molestiae magni temporibus laborum beatae natus accusamus. Alias adipisci natus nostrum voluptatibus sequi nisi, labore suscipit hic sed harum unde eius sit in. Excepturi perferendis amet culpa nemo, nesciunt nobis aliquam facilis voluptatem distinctio quasi iure laudantium ipsum omnis animi dolores odit atque! Ipsum laboriosam natus deserunt quidem, blanditiis praesentium consequatur laudantium, explicabo alias aut consequuntur iusto qui ullam ut aperiam repellat eaque quos corporis nihil! Beatae nisi nesciunt ullam facere aperiam, provident ipsa a, iste blanditiis nulla rem ex dolorem alias tempore incidunt autem ratione qui tenetur sit aspernatur laborum aliquam. Reiciendis illum omnis distinctio eligendi, impedit in quis quos odio sit vitae beatae numquam doloribus! Dolorum minima provident ad quo? Ducimus quidem consectetur reprehenderit!",
+    "In 1890 an enactment known as the Indian Railway Act was legislated and passed by the British Parliament. This piece of legislation was aimed at various matters concerning railways. After independence it was felt that some changes be brought in the Act to fulfill the needs of people in the present day. So maintaining some provisions of the Act of 1890 rendering some provisions redundant and replacing them with new provisions a new legislation named The Railways Act 1989 was enacted which came into force from 1st July 1990. ",
 
-    "Asperiores culpa veniam, fuga perferendis nobis at tempore officiis amet architecto aut nihil quibusdam a accusamus quam atque dolores minus? Nihil dolores cumque iusto deserunt perferendis corporis consequatur omnis rem repellat quis eveniet ipsum culpa id, facilis, tempora nobis repellendus saepe commodi magnam molestias veniam? Eveniet voluptate repudiandae, nihil vel doloribus nostrum rem iure omnis culpa odio incidunt, soluta eius error numquam quis quam fugiat quas possimus? Aliquam architecto nisi corrupti ratione beatae corporis, fugit maiores est esse enim dolore quisquam tempore dicta quas repellendus harum similique sit expedita quis tempora voluptates sed incidunt. Facilis, assumenda est. Repellendus hic eos asperiores unde vel maxime aliquam perspiciatis, velit, iure voluptatum vitae, adipisci repellat excepturi at architecto eligendi modi! Delectus ut similique alias ipsa harum autem, ad, sunt nisi cupiditate architecto nemo repellendus doloremque in. Perspiciatis odit consequuntur voluptate, saepe magnam facere mollitia, ab quidem totam error corrupti modi earum tenetur deleniti voluptatum explicabo neque non iste voluptatibus accusantium perferendis sed assumenda! Numquam itaque quam porro cupiditate eligendi voluptate inventore molestiae neque ad?",
+"Broad features of this Act are that Railways were re-constituted in zones with a General Manager for each zone. The Central Government had the power to fix the rates of carriage of passengers and goods. Provision for compensation by Railways on account of loss damage of goods etc. and also due to accidental deaths and injuries was maintained. Special provisions were introduced regarding the monetary liability of railways as carriers of goods etc. The Railway Claims Tribunal Act 1987 was enacted to provide speedy disposal of claims against the Railway Administration.",
+
+"Although Railway Administration made a way to compensate the consignor/consignee of goods etc. and also for compensation for the loss of lives people were not often satisfied and went to Courts which took a very long time to decide the claims and litigation was protracted for an indefinite period. Therefore the necessity was felt to expedite the disposal of claims at the earliest which resulted in the establishment of the Claims Tribunal which would exclusively deal with such claims and speedily dispose of the same. As a result the burden of Courts was reduced and speedy relief was made available. Even the refund of fares and freights was also brought within the purview of the Tribunal.",
+
+"The RCT Act is to provide for the establishment of a Railway Claims Tribunal for inquiring into and determining claims against a Railway Administration for loss destruction damage deterioration or non-delivery of animals or goods entrusted to it to be carried by railway or for the refund of fares or freight or for compensation for death or injury to passengers occurring as a result of railway accidents or untoward incidents and for matters connected therewith or incidental thereto.",
+
+"The scheme of the Act shows that it made provisions for the establishment of the Tribunal its Benches officers and staff their term eligibility the jurisdiction powers and authority of the Tribunal its procedure execution of its orders and appeals. In this way the Act is a self-contained Act that has solved the problems of the public at large.",
   ];
   return (
     <>
       <NavItemContent title={"About Us"} content={content} />
-      <hr />
+      {/* <hr />
       <h3>First number is : {nums[0]}</h3>
       <button
         className="btn btn-primary"
@@ -66,7 +72,7 @@ function AboutUs() {
       </div>
       <hr />
       <h3>number of visitors : {visitorsData?.data} </h3>
-      <h3>Last Update : {lastUpdateData?.data} </h3>
+      <h3>Last Update : {lastUpdateData?.data} </h3> */}
     </>
   );
 }

@@ -1,7 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useGetBenchLocationsMutation } from "../../../redux/slice/postApiSlice";
+import { Toggle } from "./Toggle";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../../../redux/slice/darkModeSlice";
 
 function HeaderTop() {
+  const dispatch = useDispatch();
+  const isDarkMode = useSelector((state) => state.darkMode.isDarkMode);
   const [getBenchLocations, { data, error, isLoading }] =
     useGetBenchLocationsMutation();
 
@@ -17,17 +22,37 @@ function HeaderTop() {
             <header className="top-area-contents">
               <div className="col col-lg-4 top-left-details">
                 <img src="./assets/Group 4085@2x.png" alt="Image_1" />
-                <a href="#" className="mb-lg-0 me-lg-auto link-body-emphasis">
+                <a href="#" className="mb-lg-0 me-lg-auto">
                   <h4 className="fw-bold">RAILWAY CLAIM TRIBUNAL</h4>
                   <h6>Online Court Services of RCT</h6>
                 </a>
               </div>
-              <div className="col col-lg-4 top-right-details">
-                <div className="right-badge">
-                  <span className="badge">
-                    Skip to Main Content | Screen Reader Access | A- A A+
-                    English
-                  </span>
+              <div className="col col-lg-6 top-right-details">
+                <div className="top-btn-sec">
+                  <ul>
+                    <li>
+                      <a href="/">Skip To Main Content</a>
+                    </li>
+                    <li>
+                      <a href="/">Screen Reader Access</a>
+                    </li>
+                    <li>
+                      <a href="/" className="toggle-link">
+                        <Toggle
+                          isChecked={isDarkMode}
+                          handleChange={() => {
+                            dispatch(toggleDarkMode());
+                          }}
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/">A- A A+</a>
+                    </li>
+                    <li>
+                      <a href="/">English</a>
+                    </li>
+                  </ul>
                 </div>
 
                 <div className="right-btns">
@@ -40,6 +65,9 @@ function HeaderTop() {
                     <option defaultValue={"Search Branch"}>
                       Search Branch
                     </option>
+                    {isLoading && (
+                      <option value={-1}>Loading Benches...</option>
+                    )}
                     {data?.data.map((bench) => {
                       return (
                         <option key={bench.id} value={bench.id}>
