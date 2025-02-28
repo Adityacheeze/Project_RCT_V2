@@ -86,7 +86,7 @@ function CauseList() {
                                     }}
                                   >
                                     <option value={0}>Select Bench</option>
-                                    {benchIsLoading && <option value={-1}>Loading Benches...</option>}
+                                    {benchIsLoading && <option disabled={true} value={-1}>Loading Benches...</option>}
                                     {benchData?.data.map((bench) => {
                                       return (
                                         <option key={bench.id} value={bench.id}>
@@ -112,7 +112,7 @@ function CauseList() {
                                     as="select"
                                   >
                                     <option value={0}>Select Court</option>
-                                    {courtIsLoading && <option value={-1}>Loading Courts...</option>}
+                                    {courtIsLoading && <option disabled={true} value={-1}>Loading Courts...</option>}
                                     {courtData?.data.map((court) => {
                                       return (
                                         <option

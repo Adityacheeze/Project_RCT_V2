@@ -66,7 +66,7 @@ function HeaderTop() {
                       Search Branch
                     </option>
                     {isLoading && (
-                      <option value={-1}>Loading Benches...</option>
+                      <option disabled={true} value={-1}>Loading Benches...</option>
                     )}
                     {data?.data.map((bench) => {
                       return (

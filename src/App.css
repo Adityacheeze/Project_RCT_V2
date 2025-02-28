@@ -432,11 +432,16 @@ li {
   background-size: cover;
 }
 
+.spinner{
+  color: black
+}
+
 .spinner-custom {
   margin-top: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black
 }
 
 .mid-section {
